@@ -4,8 +4,8 @@ class DbRouteAliasesModule extends Module {
 
     protected $id = 'minicore-db-route-aliases';
 
-    public function __construct(Framework $framework) {
-        parent::__construct($framework);
+    public function __construct() {
+        $framework = Framework::instance();
         $framework->add([
             'routeAliases' => 'DbRouteAliases'
         ]);

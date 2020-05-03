@@ -12,8 +12,8 @@ class DbRouteAliases extends RouteAliases {
     private $byAlias = [];
     private $byPath = [];
 
-    public function __construct(Framework $framework) {
-        parent::__construct($framework);
+    public function __construct() {
+        $framework = Framework::instance();
         $this->db = $framework->get($this->dbInstanceName);
     }
 
